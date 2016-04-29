@@ -5,3 +5,9 @@ one:
 
 two:
   content: MyText
+
+capital_tw:
+  content: The capital of Taiwan?
+
+fruit:
+  content: Which is your favorite fruit?
