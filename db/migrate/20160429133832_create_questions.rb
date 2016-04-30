@@ -1,6 +1,7 @@
 class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
+      t.integer :questionaire_id
       t.text :content
 
       t.timestamps null: false

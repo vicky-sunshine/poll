@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  questionaire_id: 1
   content: MyText
 
 two:
+  questionaire_id: 1
   content: MyText
 
 capital_tw:
+  questionaire_id: 2
   content: The capital of Taiwan?
 
 fruit:
+  questionaire_id: 2
   content: Which is your favorite fruit?

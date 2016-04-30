@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :questionaire_id %><br>
+    <%= f.number_field :questionaire_id %>
+  </div>
+  <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content, rows: 5 %>
+    <%= f.text_area :content %>
   </div>
   <div class="actions">
     <%= f.submit %>

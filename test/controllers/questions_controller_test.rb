@@ -3,44 +3,43 @@ require 'test_helper'
 class QuestionsControllerTest < ActionController::TestCase
   setup do
     @question = questions(:one)
-    @update = { content: '17 mod 3 = ?' }
   end
 
-  test 'should get index' do
+  test "should get index" do
     get :index
     assert_response :success
     assert_not_nil assigns(:questions)
   end
 
-  test 'should get new' do
+  test "should get new" do
     get :new
     assert_response :success
   end
 
-  test 'should create question' do
+  test "should create question" do
     assert_difference('Question.count') do
-      post :create, question: @update
+      post :create, question: { content: @question.content, questionaire_id: @question.questionaire_id }
     end
 
     assert_redirected_to question_path(assigns(:question))
   end
 
-  test 'should show question' do
+  test "should show question" do
     get :show, id: @question
     assert_response :success
   end
 
-  test 'should get edit' do
+  test "should get edit" do
     get :edit, id: @question
     assert_response :success
   end
 
-  test 'should update question' do
-    patch :update, id: @question, question: @update
+  test "should update question" do
+    patch :update, id: @question, question: { content: @question.content, questionaire_id: @question.questionaire_id }
     assert_redirected_to question_path(assigns(:question))
   end
 
-  test 'should destroy question' do
+  test "should destroy question" do
     assert_difference('Question.count', -1) do
       delete :destroy, id: @question
     end

@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Questionaire</th>
       <th>Content</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +14,7 @@
   <tbody>
     <% @questions.each do |question| %>
       <tr>
+        <td><%= question.questionaire_id %></td>
         <td><%= question.content %></td>
         <td><%= link_to 'Show', question %></td>
         <td><%= link_to 'Edit', edit_question_path(question) %></td>
