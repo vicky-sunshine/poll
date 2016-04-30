@@ -7,3 +7,11 @@ one:
 two:
   questionaire_id: 1
   content: MyText
+
+capital_tw:
+  questionaire_id: 2
+  content: The capital of Taiwan?
+
+fruit:
+  questionaire_id: 2
+  content: Which is your favorite fruit?
