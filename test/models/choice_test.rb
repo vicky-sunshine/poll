@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class ChoiceTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  fixtures :choices
+  test "choice attributes must not be empty" do
+    choice = Choice.new
+    assert choice.invalid?
+    assert choice.errors[:content].any?
+    assert choice.errors[:question_id].any?
+  end
 end
